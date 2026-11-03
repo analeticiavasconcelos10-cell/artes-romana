@@ -193,4 +193,4 @@ var MeshoptDecoder = (function () {
 	};
 })();
 
-export { MeshoptDecoder };
+// model-viewer loads this decoder as a classic script, which exposes MeshoptDecoder globally.
