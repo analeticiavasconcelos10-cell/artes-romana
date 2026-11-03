@@ -1,0 +1,67 @@
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obter o projeto
+        uses: actions/checkout@v4
+
+      - name: Importar a cópia completa na primeira publicação
+        shell: bash
+        run: |
+          if [ -f artes-romana-import.zip.part-01 ]; then
+            python - <<'PY'
+          from pathlib import Path
+          import hashlib, io, zipfile
+          parts = sorted(Path('.').glob('artes-romana-import.zip.part-*'))
+          data = b''.join(part.read_bytes() for part in parts)
+          expected = 'eacc7dae8e5aafea7ea33a163cf5a25efb79f6befa161bf7dbe397f4c3f592d6'
+          if hashlib.sha256(data).hexdigest() != expected:
+              raise SystemExit('A cópia recebida está incompleta ou foi alterada.')
+          with zipfile.ZipFile(io.BytesIO(data)) as archive:
+              for entry in archive.infolist():
+                  name = Path(entry.filename).relative_to('artes-romana')
+                  if name.is_absolute() or '..' in name.parts:
+                      raise SystemExit('Caminho inválido no arquivo.')
+                  if entry.is_dir():
+                      continue
+                  name.parent.mkdir(parents=True, exist_ok=True)
+                  name.write_bytes(archive.read(entry))
+          PY
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add docs scripts README.md .gitattributes .gitignore asset-manifest.json supplied-models.json
+            git rm -- artes-romana-import.zip.part-*
+            git commit -m 'Import complete Roman art presentation and local 3D assets'
+            git push origin main
+          fi
+
+      - name: Configurar o GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar o site completo
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v5
