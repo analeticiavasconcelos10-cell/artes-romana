@@ -1,0 +1,71 @@
+[
+  {
+    "file": "caracalla-met.jpg",
+    "identity": "Marble portrait of the emperor Caracalla",
+    "date": "Roman, 212–217 CE",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "40.11.1a",
+    "credit": "The Metropolitan Museum of Art, Samuel D. Lee Fund, 1940",
+    "sourcePage": "https://www.metmuseum.org/art/collection/search/253592",
+    "licenseVerification": "https://commons.wikimedia.org/wiki/File:Marble_portrait_of_the_emperor_Caracalla_MET_DP333080.jpg",
+    "directUrl": "https://images.metmuseum.org/CRDImages/gr/original/DP333080.jpg",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "visual": "Charcoal studio background; portrait head from a statue, not a complete bust.",
+    "path": "/workspace/scratch/9babd29aa9a6/roman-assets/caracalla-met.jpg",
+    "bytes": 1071963,
+    "dimensions": [
+      2911,
+      3880
+    ]
+  },
+  {
+    "file": "pantheon-night.jpg",
+    "identity": "Pantheon, Rome, photographed from the front at night",
+    "date": "Photographed 2021-09-02",
+    "photographer": "Think321",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pantheon,_Rome,_from_the_front.jpg",
+    "directUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Pantheon%2C_Rome%2C_from_the_front.jpg",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "path": "/workspace/scratch/9babd29aa9a6/roman-assets/pantheon-night.jpg",
+    "bytes": 4078826,
+    "dimensions": [
+      4128,
+      3096
+    ]
+  },
+  {
+    "file": "dove-mosaic.jpg",
+    "identity": "Doves drinking from a bowl, Dove Mosaic from Hadrian's Villa, Musei Capitolini, Rome",
+    "date": "Source title dates the mosaic to 2nd century CE; possible earlier Greek prototype",
+    "photographer": "Carole Raddato",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Mosaic_showing_doves_drinking_from_a_bowl,_from_Hadrian's_villa,_2nd_century_AD,_probably_a_copy_of_Sosus's_work_(2nd_century_BC),_Musei_Capitolini,_Rome_(14389996686).jpg",
+    "directUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Mosaic_showing_doves_drinking_from_a_bowl%2C_from_Hadrian%27s_villa%2C_2nd_century_AD%2C_probably_a_copy_of_Sosus%27s_work_%282nd_century_BC%29%2C_Musei_Capitolini%2C_Rome_%2814389996686%29.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "reuse": "Credit Carole Raddato, link source and license; indicate crops/changes. Adaptations must remain same/compatible license.",
+    "path": "/workspace/scratch/9babd29aa9a6/roman-assets/dove-mosaic.jpg",
+    "bytes": 4443226,
+    "dimensions": [
+      2841,
+      2263
+    ]
+  },
+  {
+    "file": "roman-republic-bust.glb",
+    "identity": "Unidentified Roman portrait at Ny Carlsberg Glyptotek, Copenhagen",
+    "attribution": "Scan-the-World",
+    "sourceTitle": "Bust of a Roman of the Republic at The Ny Carlsberg Glyptotek, Copenhagen",
+    "sourcePage": "https://zenodo.org/records/21352841",
+    "metadataVerification": "https://zenodo.org/api/records/21352841",
+    "directUrl": "https://zenodo.org/api/records/21352841/files/b9ff2a37ec734ac9926766caaf6ad2d6_normalized_optimized.glb/content",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "reuse": "Educational/noncommercial only; attribute Scan-the-World and source. Identification is tentative (Caesar/Sulla/unknown); use unnamed Roman portrait, not a named emperor.",
+    "format": "GLB glTF2; 1 mesh; 3 embedded PBR textures; KHR_draco_mesh_compression required; scene node has rotation [0.7071068287,0,0,0.7071068287].",
+    "md5": "e3aa87b79332f5d4ca83b4c04d2eaa90",
+    "path": "/workspace/scratch/9babd29aa9a6/roman-assets/roman-republic-bust.glb",
+    "bytes": 2119056
+  }
+]
